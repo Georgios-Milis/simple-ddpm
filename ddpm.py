@@ -59,7 +59,7 @@ class Diffusion:
 
 
 def train(args):
-    setup_logging(args.run_name)
+    logging.setup_logging(args.run_name)
     device = args.device
     dataloader = get_data(args)
     model = UNet().to(device)
